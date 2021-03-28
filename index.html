@@ -49,7 +49,30 @@
       <div class="tile is-ancestor">
         <div class="tile is-parent is-vertical">
           <div class="tile is-child is-vertical has-background-dark box">
-            <div id="map" style="width: 100%; height:500px;"></div>
+            <div id="hospital" style="width: 100%; height:500px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="tile is-ancestor">
+      <div class="tile is-parent is-vertical is-6">
+        <div class="tile is-child has-background-dark box">
+          <h2 class="title has-text-primary-dark">
+            Wheelchair Data
+          </h2>
+          <div class="has-text-white">
+            <p>
+              Wheelchair data is important to equitable access to routing engines. However not all urban areas have their wheelchair acessible features marked in their urban core, even though the ADA means such features almost certainly exist.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile is-ancestor">
+        <div class="tile is-parent is-vertical">
+          <div class="tile is-child is-vertical has-background-dark box">
+            <div id="wheelchair" style="width: 100%; height:500px;"></div>
           </div>
         </div>
       </div>
@@ -57,11 +80,19 @@
     <script>
       mapboxgl.accessToken =
         "pk.eyJ1IjoibWF4YnJpY2tuZXItd29yayIsImEiOiJja21zc3RpZnEwbDN5Mm9wZjF1MzZhM2E5In0.JeXEAiKlAovGQMsdq1RkVQ";
-      var map = new mapboxgl.Map({
-        container: "map",
+      var hospital = new mapboxgl.Map({
+        container: "hospital",
         style: "mapbox://styles/maxbrickner-work/ckmqzso6r1j0c17mz1vkwi67z",
         center: [-83, 40],
         zoom: 9.5,
+        pitch: 40,
+        bearing: 0
+      });
+      var wheelchair = new mapboxgl.Map({
+        container: "wheelchair",
+        style: "mapbox://styles/maxbrickner-work/ckmsrr1u21d7w17myii21z9dn",
+        center: [-83, 40],
+        zoom: 7,
         pitch: 40,
         bearing: 0
       });
